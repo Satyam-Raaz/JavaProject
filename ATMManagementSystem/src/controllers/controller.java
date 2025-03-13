@@ -148,7 +148,10 @@ public class controller {
             System.out.println("3. Apply ATM Card");
             System.out.println("4. View ATM Card ");
             System.out.println("5. View Transaction History ");
-            System.out.println("6. LogOut ");
+            System.out.println("6. Deposit");
+            System.out.println("7. Change Pin Number");
+            System.out.println("8. View Balance");
+            System.out.println("9. LogOut ");
             System.out.println("Enter Your Choice: ");
             int choice = scanner.nextInt();
 
@@ -216,6 +219,46 @@ public class controller {
                     userMenu();
                     break;
                 case 6:
+                    System.out.println("Enter Amount: ");
+                    int amt=scanner.nextInt();
+                    System.out.println("Enter Account Id: ");
+                    int acc_id=scanner.nextInt();
+                    Account account1=accountService.getAccountById(acc_id);
+                    if(account1!=null){
+                        System.out.println("Deposit Amount: "+amt+" is successfully");
+                        account1.setBalance(account1.getBalance()+amt);
+                        transactionService.addTransaction(acc_id,amt);
+                    }
+                    else{
+                        System.out.println("Account is not present");
+                    }
+                    userMenu();
+                    break;
+                case 7:
+                    System.out.println("Enter Atm Number: ");
+                    long atm_no= scanner.nextLong();
+                    System.out.println("Enter Old PIN: ");
+                    int oldPin= scanner.nextInt();
+                    System.out.println("Enter New Pin: ");
+                    int newPin= scanner.nextInt();
+                    atmService.getChangePIN(atm_no,oldPin,newPin);
+                    userMenu();
+                    break;
+                case 8:
+                    System.out.println("Enter Atm Number: ");
+                    long AtmNo= scanner.nextLong();
+                    Account account2=accountService.getAccountByATMNo(AtmNo);
+                    System.out.println("enter pin: ");
+                    int atm_pin= scanner.nextInt();
+                    if(atmService.authenticateATMCard(AtmNo,atm_pin)){
+                        System.out.println("Available Balance: "+account2.getBalance());
+                    }
+                    else {
+                        System.out.println("Invalid Password");
+                    }
+                    userMenu();
+                    break;
+                case 9:
                     System.out.println("Log Out Successfully!!!");
                     return;
                 default:

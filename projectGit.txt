@@ -1,0 +1,250 @@
+Microsoft Windows [Version 10.0.22631.4890]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\hp>d:/
+'d:/' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\hp>d: /
+
+D:\>dir
+ Volume in drive D is New Volume
+ Volume Serial Number is A619-F41C
+
+ Directory of D:\
+
+10-01-2025  00:36    <DIR>          Applet
+16-03-2024  00:27                45 bharat.txt
+08-01-2025  20:45    <DIR>          Dataset_Data_Science
+28-02-2025  15:15    <DIR>          Document
+16-03-2024  00:48             9,825 DosCommand.txt
+26-12-2024  16:00    <DIR>          firstproject
+20-11-2024  01:32    <DIR>          Java_DSA
+16-03-2024  01:03    <DIR>          roshan
+13-01-2025  01:05    <DIR>          Users
+               2 File(s)          9,870 bytes
+               7 Dir(s)  463,811,448,832 bytes free
+
+D:\>cd document
+
+D:\Document>dir
+ Volume in drive D is New Volume
+ Volume Serial Number is A619-F41C
+
+ Directory of D:\Document
+
+28-02-2025  15:15    <DIR>          .
+13-01-2025  01:11    <DIR>          .metadata
+19-01-2025  18:47       108,986,345 43086.mp4
+07-03-2025  18:40    <DIR>          Aimerz
+13-01-2025  01:13    <DIR>          AppletProj
+15-02-2025  00:55    <DIR>          DeepLearning_Assignment
+07-02-2025  18:35               545 Image_Classification.ipynb
+07-03-2025  22:14    <DIR>          JavaProject
+23-12-2024  23:22    <DIR>          Java_Dsa
+03-11-2024  23:58    <DIR>          Java_Swayam
+28-02-2025  15:16    <DIR>          LangchainProject
+19-12-2024  19:51         1,705,256 Mlbasiics.ipynb
+05-12-2024  13:58    <DIR>          NLP_Project
+28-02-2025  00:14    <DIR>          revision_aimerz_batch_2-main
+19-12-2024  15:12         1,019,544 shipment.csv
+               4 File(s)    111,711,690 bytes
+              11 Dir(s)  463,811,448,832 bytes free
+
+D:\Document>cd JavaProject
+
+D:\Document\JavaProject>git init
+Initialized empty Git repository in D:/Document/JavaProject/.git/
+
+D:\Document\JavaProject>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ATMManagementSystem/
+        BankAppCore/
+        BankingAppCore/
+        LibraryManagementSystem/
+        event-management-system/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Document\JavaProject>git add .
+warning: in the working copy of 'ATMManagementSystem/.gitignore', LF will be replaced by CRLF the next time Git touchesit
+warning: in the working copy of 'ATMManagementSystem/src/Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'BankAppCore/.idea/workspace.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'BankingAppCore/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'BankingAppCore/src/Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'LibraryManagementSystem/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'LibraryManagementSystem/src/Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'event-management-system/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'event-management-system/src/Main.java', LF will be replaced by CRLF the next time Git touches it
+
+D:\Document\JavaProject>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   ATMManagementSystem/.gitignore
+        new file:   ATMManagementSystem/.idea/.gitignore
+        new file:   ATMManagementSystem/.idea/misc.xml
+        new file:   ATMManagementSystem/.idea/modules.xml
+        new file:   ATMManagementSystem/.idea/uiDesigner.xml
+        new file:   ATMManagementSystem/ATMManagementSystem.iml
+        new file:   ATMManagementSystem/src/Main.java
+        new file:   ATMManagementSystem/src/controllers/controller.java
+        new file:   ATMManagementSystem/src/models/ATMCard.java
+        new file:   ATMManagementSystem/src/models/Account.java
+        new file:   ATMManagementSystem/src/models/Transaction.java
+        new file:   ATMManagementSystem/src/models/User.java
+        new file:   ATMManagementSystem/src/repositories/ATMCardImpl.java
+        new file:   ATMManagementSystem/src/repositories/AccountImpl.java
+        new file:   ATMManagementSystem/src/repositories/TransactionImpl.java
+        new file:   ATMManagementSystem/src/repositories/UserImpl.java
+        new file:   ATMManagementSystem/src/services/ATMCardService.java
+        new file:   ATMManagementSystem/src/services/AccountService.java
+        new file:   ATMManagementSystem/src/services/TransactionService.java
+        new file:   ATMManagementSystem/src/services/UserService.java
+        new file:   BankAppCore/.idea/workspace.xml
+        new file:   BankingAppCore/.gitignore
+        new file:   BankingAppCore/.idea/.gitignore
+        new file:   BankingAppCore/.idea/misc.xml
+        new file:   BankingAppCore/.idea/modules.xml
+        new file:   BankingAppCore/BankingAppCore.iml
+        new file:   BankingAppCore/src/Main.java
+        new file:   BankingAppCore/src/com/bank/beans/Account.java
+        new file:   BankingAppCore/src/com/bank/beans/Transaction.java
+        new file:   BankingAppCore/src/com/bank/beans/User.java
+        new file:   BankingAppCore/src/com/bank/controller/BankController.java
+        new file:   BankingAppCore/src/com/bank/repository/BankRepository.java
+        new file:   BankingAppCore/src/com/bank/service/BankService.java
+        new file:   LibraryManagementSystem/.gitignore
+        new file:   LibraryManagementSystem/.idea/.gitignore
+        new file:   LibraryManagementSystem/.idea/misc.xml
+        new file:   LibraryManagementSystem/.idea/modules.xml
+        new file:   LibraryManagementSystem/LibraryManagementSystem.iml
+        new file:   LibraryManagementSystem/src/Main.java
+        new file:   LibraryManagementSystem/src/com/library/controller/LibraryMainController.java
+        new file:   LibraryManagementSystem/src/com/library/repository/AccountDAO.java
+        new file:   LibraryManagementSystem/src/com/library/repository/BookDAO.java
+        new file:   LibraryManagementSystem/src/com/library/repository/UserDAO.java
+        new file:   LibraryManagementSystem/src/com/library/service/AccountService.java
+        new file:   LibraryManagementSystem/src/com/library/service/BookService.java
+        new file:   LibraryManagementSystem/src/com/library/service/UserService.java
+        new file:   LibraryManagementSystem/src/com/libray/beans/Account.java
+        new file:   LibraryManagementSystem/src/com/libray/beans/Book.java
+        new file:   LibraryManagementSystem/src/com/libray/beans/IssueStatus.java
+        new file:   LibraryManagementSystem/src/com/libray/beans/User.java
+        new file:   event-management-system/.gitignore
+        new file:   event-management-system/.idea/.gitignore
+        new file:   event-management-system/.idea/misc.xml
+        new file:   event-management-system/.idea/modules.xml
+        new file:   event-management-system/event-management-system.iml
+        new file:   event-management-system/src/Main.java
+        new file:   event-management-system/src/com/events/EventsDAO/EventDAOImpl.java
+        new file:   event-management-system/src/com/events/EventsDAO/EventsDAO.java
+        new file:   event-management-system/src/com/events/EventsDAO/UserDAO.java
+        new file:   event-management-system/src/com/events/EventsDAO/UserDAOImpl.java
+        new file:   event-management-system/src/com/events/eventExceptions/EventsFullException.java
+        new file:   event-management-system/src/com/events/eventsController/EventManagementSystem.java
+        new file:   event-management-system/src/com/events/eventsController/EventsController.java
+        new file:   event-management-system/src/com/events/eventsService/EventsService.java
+        new file:   event-management-system/src/com/events/eventsService/EventsServiceImpl.java
+        new file:   event-management-system/src/com/events/pojos/Event.java
+        new file:   event-management-system/src/com/events/pojos/TicketBookings.java
+        new file:   event-management-system/src/com/events/pojos/User.java
+
+
+D:\Document\JavaProject>git commit -m "first commit"
+[master (root-commit) 10b428b] first commit
+ 68 files changed, 2725 insertions(+)
+ create mode 100644 ATMManagementSystem/.gitignore
+ create mode 100644 ATMManagementSystem/.idea/.gitignore
+ create mode 100644 ATMManagementSystem/.idea/misc.xml
+ create mode 100644 ATMManagementSystem/.idea/modules.xml
+ create mode 100644 ATMManagementSystem/.idea/uiDesigner.xml
+ create mode 100644 ATMManagementSystem/ATMManagementSystem.iml
+ create mode 100644 ATMManagementSystem/src/Main.java
+ create mode 100644 ATMManagementSystem/src/controllers/controller.java
+ create mode 100644 ATMManagementSystem/src/models/ATMCard.java
+ create mode 100644 ATMManagementSystem/src/models/Account.java
+ create mode 100644 ATMManagementSystem/src/models/Transaction.java
+ create mode 100644 ATMManagementSystem/src/models/User.java
+ create mode 100644 ATMManagementSystem/src/repositories/ATMCardImpl.java
+ create mode 100644 ATMManagementSystem/src/repositories/AccountImpl.java
+ create mode 100644 ATMManagementSystem/src/repositories/TransactionImpl.java
+ create mode 100644 ATMManagementSystem/src/repositories/UserImpl.java
+ create mode 100644 ATMManagementSystem/src/services/ATMCardService.java
+ create mode 100644 ATMManagementSystem/src/services/AccountService.java
+ create mode 100644 ATMManagementSystem/src/services/TransactionService.java
+ create mode 100644 ATMManagementSystem/src/services/UserService.java
+ create mode 100644 BankAppCore/.idea/workspace.xml
+ create mode 100644 BankingAppCore/.gitignore
+ create mode 100644 BankingAppCore/.idea/.gitignore
+ create mode 100644 BankingAppCore/.idea/misc.xml
+ create mode 100644 BankingAppCore/.idea/modules.xml
+ create mode 100644 BankingAppCore/BankingAppCore.iml
+ create mode 100644 BankingAppCore/src/Main.java
+ create mode 100644 BankingAppCore/src/com/bank/beans/Account.java
+ create mode 100644 BankingAppCore/src/com/bank/beans/Transaction.java
+ create mode 100644 BankingAppCore/src/com/bank/beans/User.java
+ create mode 100644 BankingAppCore/src/com/bank/controller/BankController.java
+ create mode 100644 BankingAppCore/src/com/bank/repository/BankRepository.java
+ create mode 100644 BankingAppCore/src/com/bank/service/BankService.java
+ create mode 100644 LibraryManagementSystem/.gitignore
+ create mode 100644 LibraryManagementSystem/.idea/.gitignore
+ create mode 100644 LibraryManagementSystem/.idea/misc.xml
+ create mode 100644 LibraryManagementSystem/.idea/modules.xml
+ create mode 100644 LibraryManagementSystem/LibraryManagementSystem.iml
+ create mode 100644 LibraryManagementSystem/src/Main.java
+ create mode 100644 LibraryManagementSystem/src/com/library/controller/LibraryMainController.java
+ create mode 100644 LibraryManagementSystem/src/com/library/repository/AccountDAO.java
+ create mode 100644 LibraryManagementSystem/src/com/library/repository/BookDAO.java
+ create mode 100644 LibraryManagementSystem/src/com/library/repository/UserDAO.java
+ create mode 100644 LibraryManagementSystem/src/com/library/service/AccountService.java
+ create mode 100644 LibraryManagementSystem/src/com/library/service/BookService.java
+ create mode 100644 LibraryManagementSystem/src/com/library/service/UserService.java
+ create mode 100644 LibraryManagementSystem/src/com/libray/beans/Account.java
+ create mode 100644 LibraryManagementSystem/src/com/libray/beans/Book.java
+ create mode 100644 LibraryManagementSystem/src/com/libray/beans/IssueStatus.java
+ create mode 100644 LibraryManagementSystem/src/com/libray/beans/User.java
+ create mode 100644 event-management-system/.gitignore
+ create mode 100644 event-management-system/.idea/.gitignore
+ create mode 100644 event-management-system/.idea/misc.xml
+ create mode 100644 event-management-system/.idea/modules.xml
+ create mode 100644 event-management-system/event-management-system.iml
+ create mode 100644 event-management-system/src/Main.java
+ create mode 100644 event-management-system/src/com/events/EventsDAO/EventDAOImpl.java
+ create mode 100644 event-management-system/src/com/events/EventsDAO/EventsDAO.java
+ create mode 100644 event-management-system/src/com/events/EventsDAO/UserDAO.java
+ create mode 100644 event-management-system/src/com/events/EventsDAO/UserDAOImpl.java
+ create mode 100644 event-management-system/src/com/events/eventExceptions/EventsFullException.java
+ create mode 100644 event-management-system/src/com/events/eventsController/EventManagementSystem.java
+ create mode 100644 event-management-system/src/com/events/eventsController/EventsController.java
+ create mode 100644 event-management-system/src/com/events/eventsService/EventsService.java
+ create mode 100644 event-management-system/src/com/events/eventsService/EventsServiceImpl.java
+ create mode 100644 event-management-system/src/com/events/pojos/Event.java
+ create mode 100644 event-management-system/src/com/events/pojos/TicketBookings.java
+ create mode 100644 event-management-system/src/com/events/pojos/User.java
+
+D:\Document\JavaProject>git branch -M main
+
+D:\Document\JavaProject>git remote add origin https://github.com/Satyam-Raaz/JavaProject.git
+
+D:\Document\JavaProject>git push -u origin main
+Enumerating objects: 93, done.
+Counting objects: 100% (93/93), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (83/83), done.
+Writing objects: 100% (93/93), 23.49 KiB | 511.00 KiB/s, done.
+Total 93 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), done.
+To https://github.com/Satyam-Raaz/JavaProject.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+D:\Document\JavaProject>
