@@ -5,6 +5,8 @@ import com.library.repository.BookDAO;
 import com.library.repository.UserDAO;
 import com.libray.beans.Book;
 
+import java.util.List;
+
 public class BookService {
     private BookDAO bookDAO=new BookDAO();
     private AccountDAO accountDAO=new AccountDAO();
@@ -14,13 +16,23 @@ public class BookService {
         return bookDAO.addBook(new Book(((long)(new Book().hashCode())),  name, author, language,price ,stock));
     }
 
-    public Book[] getAllBooks(){
+    public List<Book> getAllBooks(){
         return bookDAO.getAllBooks();
     }
 
     public Book getBookById(long id){
         return bookDAO.getBookById(id);
     }
+    public boolean addExitBook(String name,int stock){
+        Book book=bookDAO.getBookByname(name);
+        if(book!=null){
+            book.setStock(book.getStock()+stock);
+            return true;
+        }
+        return false;
+    }
+
+
 
     public  boolean updateBook(Book updateBook){
         return bookDAO.updateBook(updateBook);

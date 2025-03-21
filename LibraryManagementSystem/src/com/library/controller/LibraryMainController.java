@@ -14,6 +14,8 @@ import com.libray.beans.IssueStatus;
 
 
 import java.security.PrivateKey;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class LibraryMainController {
@@ -94,7 +96,9 @@ public class LibraryMainController {
         System.out.println("---Admin User---");
         System.out.println("1. Add Book");
         System.out.println("2. View Books ");
-        System.out.println("3. LogOut");
+        System.out.println("3. Add Existing Book");
+        System.out.println("4. All Users: ");
+        System.out.println("5. LogOut");
         System.out.println("Enter Your Choice");
         int choice= scanner.nextInt();
 
@@ -116,7 +120,7 @@ public class LibraryMainController {
                 adminMenu();
                 break;
             case 2:
-                Book[] books= adminService.getAllBooks();
+                List<Book> books=adminService.getAllBooks();
                 if(books==null){
                     System.out.println("Book not available");
                     adminMenu();
@@ -128,6 +132,31 @@ public class LibraryMainController {
                 adminMenu();
                 break;
             case 3:
+                System.out.println("Enter Book Name: ");
+                String bname= scanner.next();
+                System.out.println("Enter Quantity: ");
+                int quant= scanner.nextInt();
+                if(adminService.addExitBook(bname,quant)){
+                    System.out.println("Book Added Successfull!");
+                }
+                else {
+                    System.out.println("Book Not Present");
+                }
+                adminMenu();
+                break;
+            case 4:
+                List<User> users=userService.getAllUser();
+                if(users!=null){
+                    for(User user:users){
+                        System.out.println(user.getId()+" "+user.getName()+" "+user.getEmail()+" "+user.getPassword());
+                    }
+                }
+                else {
+                    System.out.println("No user found");
+                }
+                adminMenu();
+                break;
+            case 5:
                 System.out.println("Logout successfully");
                 return;
             default:
@@ -147,7 +176,7 @@ public class LibraryMainController {
 
         switch (choice){
             case 1:
-                Book[] books= adminService.getAllBooks();
+                List<Book> books=adminService.getAllBooks();
                 if(books==null){
                     System.out.println("No Available Book");
                     userMenu();
@@ -205,7 +234,7 @@ public class LibraryMainController {
         }
     }
     private static void viewAccounts(){
-        Account[] accounts= accountService.getAllAccounts();
+        List<Account> accounts=accountService.getAllAccounts();
         if(accounts==null){
             System.out.println("No account found ");
             return;
@@ -216,7 +245,7 @@ public class LibraryMainController {
             int bookId=account.getBookId();
             Book book=adminService.getBookById(bookId);
             System.out.println("Account ID: " + account.getTxnId() + " | Book ID: " + account.getBookId() +
-                    " | Quantity: " + book.getStock() + " | Issue Date: " +account.getIssueDate() + " | Issue Date: "+ account.getDueDate() +
+                    " | Quantity: " + book.getStock() + " | Issue Date: " +account.getIssueDate() + " | Due Date: "+ account.getDueDate() +
                     " | Total fine: $" + account.getFine() +"| IssueStatus: "+account.getStatus());
         }
     }

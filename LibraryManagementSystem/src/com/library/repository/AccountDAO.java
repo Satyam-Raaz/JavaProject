@@ -3,28 +3,26 @@ package com.library.repository;
 import com.libray.beans.Account;
 import com.libray.beans.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AccountDAO {
-    private Account[] accounts=new Account[100];
+    private static List<Account> accounts=new ArrayList<>();
     private int accountCount=0;
 
     public boolean addAccount(Account account){
-        if(accountCount<accounts.length){
-            accounts[accountCount++]=account;
-            return true;
-        }
-        return false;
+        accounts.add(account);
+        return true;
     }
 
-    public Account[] getAllAccounts(){
-        Account[] acc=new Account[accountCount];
-        System.arraycopy(accounts,0,acc,0,accountCount);
-        return acc;
+    public List<Account> getAllAccounts(){
+        return accounts;
     }
 
     public  Account getAccountByUserId(int userId){
-        for(int i=0;i<accountCount;i++){
-            if(accounts[i].getUserId()==userId){
-                return accounts[i];
+        for(int i=0;i<accounts.size();i++){
+            if(accounts.get(i).getUserId()==userId){
+                return accounts.get(i);
             }
         }
         return null;

@@ -2,32 +2,32 @@ package com.library.repository;
 
 import com.libray.beans.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserDAO {
-    private static User[] users=new User[100];
+    private static List<User> users=new ArrayList<>();
     private static int userCount=0;
 
     public    static  boolean loadAdmin(User admin){
-        if(userCount<users.length){
-            users[userCount++]=admin;
-            return  true;
-        }
-        return false;
+        users.add(admin);
+        return true;
     }
 
     public boolean addUser(User user){
-        if(userCount<users.length){
-            users[userCount++]=user;
-            return true;
-        }
-        return false;
+        users.add(user);
+        return  true;
     }
 
     public User getUserByEmail(String email){
-        for(int i=0;i<userCount;i++){
-            if(users[i].getEmail().equals(email)){
-                return users[i];
+        for(int i=0;i< users.size();i++){
+            if(users.get(i).getEmail().equals(email)){
+                return users.get(i);
             }
         }
         return null;
+    }
+    public List<User> getAllUser(){
+        return users;
     }
 }

@@ -3,6 +3,8 @@ package com.library.service;
 import com.library.repository.UserDAO;
 import com.libray.beans.User;
 
+import java.util.List;
+
 public class UserService {
     private UserDAO userDAO=new UserDAO();
 
@@ -19,6 +21,9 @@ public class UserService {
             return user;
         }
         return null;
+    }
+    public List<User> getAllUser(){
+        return userDAO.getAllUser();
     }
 
 
